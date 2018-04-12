@@ -1,0 +1,29 @@
+F:\Project\Blog\RemotingObject\bin\Debug\RemotingObject.dll
+F:\Project\Blog\RemotingObject\bin\Debug\RemotingObject.pdb
+F:\Project\Blog\RemotingObject\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Project\Blog\RemotingObject\obj\x86\Debug\RemotingObject.dll
+F:\Project\Blog\RemotingObject\obj\x86\Debug\RemotingObject.pdb
+C:\Documents and Settings\Administrator\桌面\Blog\RemotingObject\bin\Debug\RemotingObject.dll
+C:\Documents and Settings\Administrator\桌面\Blog\RemotingObject\bin\Debug\RemotingObject.pdb
+C:\Documents and Settings\Administrator\桌面\Blog\RemotingObject\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Blog\RemotingObject\obj\x86\Debug\RemotingObject.dll
+C:\Documents and Settings\Administrator\桌面\Blog\RemotingObject\obj\x86\Debug\RemotingObject.pdb
+C:\Documents and Settings\Administrator\桌面\Client\RemotingObject\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\桌面\Client\RemotingObject\bin\Debug\Remoting.dll
+C:\Documents and Settings\Administrator\桌面\Client\RemotingObject\bin\Debug\Remoting.pdb
+C:\Documents and Settings\Administrator\桌面\Client\RemotingObject\obj\x86\Debug\Remoting.dll
+C:\Documents and Settings\Administrator\桌面\Client\RemotingObject\obj\x86\Debug\Remoting.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\Server\RemotingObject\bin\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\Server\RemotingObject\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\Server\RemotingObject\obj\x86\Debug\Remoting.csprojResolveAssemblyReference.cache
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\Server\RemotingObject\obj\x86\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\Server\RemotingObject\obj\x86\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\Client\RemotingObject\bin\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\Client\RemotingObject\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\Client\RemotingObject\obj\x86\Debug\Remoting.csprojResolveAssemblyReference.cache
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\Client\RemotingObject\obj\x86\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\Client\RemotingObject\obj\x86\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\RemotingObject\bin\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\RemotingObject\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\RemotingObject\obj\x86\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\RemotingObject\obj\x86\Debug\SeeSharpTools.JY.Remoting.pdb

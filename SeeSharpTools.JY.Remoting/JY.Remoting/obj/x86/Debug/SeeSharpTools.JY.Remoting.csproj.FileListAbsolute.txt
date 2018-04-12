@@ -1,0 +1,16 @@
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\RemotingObject\bin\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\RemotingObject\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\RemotingObject\obj\x86\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\Remoting\RemotingObject\obj\x86\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\JY.Remoting\bin\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\JY.Remoting\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\JY.Remoting\obj\x86\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\JY.Remoting\obj\x86\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\JY.Remoting\bin\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\JY.Remoting\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\JY.Remoting\obj\x86\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\JY.Remoting\obj\x86\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\JY.Remoting\bin\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\JY.Remoting\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\JY.Remoting\obj\x86\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\JY.Remoting\obj\x86\Debug\SeeSharpTools.JY.Remoting.pdb

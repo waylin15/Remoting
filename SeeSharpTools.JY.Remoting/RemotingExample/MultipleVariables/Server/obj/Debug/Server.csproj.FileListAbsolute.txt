@@ -1,0 +1,54 @@
+C:\Users\myway\Documents\Visual Studio 2015\Projects\RemotingExample\Server\bin\Debug\Server.exe
+C:\Users\myway\Documents\Visual Studio 2015\Projects\RemotingExample\Server\bin\Debug\Server.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\RemotingExample\Server\bin\Debug\SeeSharpTools.JY.GUI.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\RemotingExample\Server\bin\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\RemotingExample\Server\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\RemotingExample\Server\bin\Debug\SeeSharpTools.JY.GUI.xml
+C:\Users\myway\Documents\Visual Studio 2015\Projects\RemotingExample\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\myway\Documents\Visual Studio 2015\Projects\RemotingExample\Server\obj\Debug\Server.ServerForm.resources
+C:\Users\myway\Documents\Visual Studio 2015\Projects\RemotingExample\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\myway\Documents\Visual Studio 2015\Projects\RemotingExample\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+C:\Users\myway\Documents\Visual Studio 2015\Projects\RemotingExample\Server\obj\Debug\Server.exe
+C:\Users\myway\Documents\Visual Studio 2015\Projects\RemotingExample\Server\obj\Debug\Server.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\Server.exe
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\Server.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.ServerForm.resources
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.exe
+C:\Users\myway\Documents\Visual Studio 2015\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.pdb
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\Server.exe
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\Server.pdb
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.ServerForm.resources
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.exe
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.pdb
+C:\Users\Way\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\myway\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.exe
+C:\Users\myway\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.pdb
+C:\Users\myway\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\Server.exe
+C:\Users\myway\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\Server.pdb
+C:\Users\myway\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\myway\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.ServerForm.resources
+C:\Users\myway\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\myway\OneDrive\JYTEK\Projects\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.exe
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.pdb
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\Server.exe
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\Server.pdb
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\SeeSharpTools.JY.GUI.dll
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\SeeSharpTools.JY.Remoting.dll
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\SeeSharpTools.JY.GUI.xml
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.ServerForm.resources
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.csproj.GenerateResource.Cache
