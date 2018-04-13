@@ -6,28 +6,29 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using SeeSharpTools.JY.Remoting.Common;
+using SeeSharpTools.JY.Remoting;
 
 namespace Client
 {
     public partial class ClientForm : Form
     {
         private Configuration config = new Configuration();
-        private List<SeeSharpTools.JY.Remoting.Common.Client> clientList = new List<SeeSharpTools.JY.Remoting.Common.Client>();
+        private List<JYRemotingClient> clientList = new List<JYRemotingClient>();
 
         public ClientForm()
         {
             InitializeComponent();
-            config.Setting.Add(new ClientSetting() { LocalPort = 0, ConnectedPort = 8088, Name = "switch" });
-            config.Setting.Add(new ClientSetting() { LocalPort=1, ConnectedPort = 8088, Name = "text" });
         }
 
         private void InitializeClient()
         {
             clientList.Clear();
+            config.Setting.Add(new ClientSetting() { ConnectedIP = textBox_ipAddress.Text, LocalPort = 0, ConnectedPort = int.Parse(textBox_port.Text), Name = textBox_varName1.Text });
+            config.Setting.Add(new ClientSetting() { ConnectedIP = textBox_ipAddress.Text, LocalPort = 1, ConnectedPort = int.Parse(textBox_port.Text), Name = textBox_varName2.Text });
+
             foreach (ClientSetting item in config.Setting)
             {
-                SeeSharpTools.JY.Remoting.Common.Client client=new SeeSharpTools.JY.Remoting.Common.Client(item);
+                JYRemotingClient client =new JYRemotingClient(item);
                 clientList.Add(client);
                 client.ServerDisconnectionEvent += Client_ServerDisconnectionEvent;
                 client.Start();
@@ -39,15 +40,6 @@ namespace Client
             MessageBox.Show("服务器断线");
         }
 
-        private void ClientForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            InitializeClient();
-            timer1.Start();
-        }
 
         [Serializable]
         public class Configuration
@@ -68,12 +60,12 @@ namespace Client
 
                 if (clientList[0].IsDataUpdated)
                 {
-                    led1.Value = (bool)clientList[0].ReadData();
+                    led_variable1.Value = (bool)clientList[0].Read();
 
                 }
                 if (clientList[1].IsDataUpdated)
                 {
-                    textBox2.Text = clientList[1].ReadData().ToString();
+                    textBox_variable2.Text = clientList[1].Read().ToString();
                 }
 
                 //重复读取
@@ -95,15 +87,24 @@ namespace Client
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+
+        private void button_writeText_Click(object sender, EventArgs e)
         {
-            clientList[1].WriteData(textBox1.Text);
+            clientList[1].Write(textBox_variable2.Text);
+
         }
 
-        private void buttonSwitch1_ValueChanged(object sender, EventArgs e)
+        private void buttonSwitch_update_ValueChanged(object sender, EventArgs e)
         {
-            led1.Value = buttonSwitch1.Value;
-            clientList[0].WriteData(buttonSwitch1.Value);
+            led_variable1.Value = buttonSwitch_update.Value;
+            clientList[0].Write(buttonSwitch_update.Value);
+
+        }
+
+        private void button_connect_Click(object sender, EventArgs e)
+        {
+            InitializeClient();
+            timer1.Start();
         }
     }
 }

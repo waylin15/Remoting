@@ -1,6 +1,7 @@
-﻿using SeeSharpTools.JY.Remoting.Common;
+﻿using SeeSharpTools.JY.Remoting;
 using System;
 using System.ComponentModel;
+using System.Net;
 using System.Windows.Forms;
 
 namespace Server
@@ -9,26 +10,12 @@ namespace Server
     {
         private Random rand = new Random();
         private double[] data = new double[10];
-        private SeeSharpTools.JY.Remoting.Common.Server _server;
-        private BindingList<RemotingVariable> variables;
-        private ServerSetting setting = new ServerSetting() { LocalPort = 8088 };
+        private JYRemotingServer _server;
+        private ServerSetting setting;
         public ServerForm()
         {
             InitializeComponent();
-            variables = new BindingList<RemotingVariable>();
-            variables.Add(new RemotingVariable("switch",false) );
-            variables.Add(new RemotingVariable("text", "text"));
-
-            for (int i = 0; i < variables.Count; i++)
-            {
-                int index= dataGridView1.Rows.Add();
-                dataGridView1.Rows[index].Cells["uri"].Value = string.Format("tcp://{0}:{1}/{2}", "localhost", setting.LocalPort, variables[i].Name);
-                dataGridView1.Rows[index].Cells["name"].Value = variables[i].Name;
-                dataGridView1.Rows[index].Cells["type"].Value = variables[i].Value.GetType().ToString();
-                dataGridView1.Rows[index].Cells["value"].ValueType = variables[i].Value.GetType();
-                //dataGridView1.Rows[index].Cells["value"].bi
-            }
-
+            setting = new ServerSetting() { LocalPort = int.Parse(textBox_port.Text) };
             InitializeServer();
             timer1.Start();
         }
@@ -38,11 +25,11 @@ namespace Server
             timer1.Enabled = false;
             if (_server.Variables[0].IsDataUpdated)
             {
-                led1.Value = (bool)_server.Variables[0].Read();
+                led_variable1.Value = (bool)_server.Variables[0].Read();
             }
             if (_server.Variables[1].IsDataUpdated)
             {
-                textBox2.Text = _server.Variables[1].Read().ToString();
+                textBox_variable2.Text = _server.Variables[1].Read().ToString();
 
             }
 
@@ -58,10 +45,10 @@ namespace Server
 
         private void InitializeServer()
         {
-            _server = new SeeSharpTools.JY.Remoting.Common.Server(new ServerSetting() { LocalPort = 8088 });
+            _server = new JYRemotingServer(setting);
             _server.Start();
-            _server.AddVariable("switch",typeof(bool));
-            _server.AddVariable("text",typeof(string));
+            _server.AddVariable(textBox_varName1.Text,led_variable1.Value.GetType());
+            _server.AddVariable(textBox_varName2.Text, textBox_variable2.Text.GetType());
             _server.Variables[0].DataUpdatedEvent += ServerForm_DataUpdatedEvent;
         }
 
@@ -71,27 +58,14 @@ namespace Server
 
         private void buttonSwitch1_ValueChanged(object sender, EventArgs e)
         {
-            led1.Value = buttonSwitch1.Value;
-            var a = _server.Variables[0];
-            a.Write(buttonSwitch1.Value);
+            led_variable1.Value = buttonSwitch_update.Value;
+            _server.Variables[0].Write(buttonSwitch_update.Value);
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            _server.Variables[1].Write(textBox1.Text);
+            _server.Variables[1].Write(textBox_variable2.Text);
         }
     }
 
-    internal class RemotingVariable
-    {
-        public object Value { get; set; }
-        public string Name { get; }
-
-        public RemotingVariable(string name, object value)
-        {
-            this.Value = value;
-            this.Name = name;
-        }
-
-    }
 }

@@ -52,3 +52,13 @@ C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariabl
 C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.ServerForm.resources
 C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.Properties.Resources.resources
 C:\Users\myway\Desktop\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+D:\SVN\WayLibrary\SeeSharpTools.JY.Remoting\trunk\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.exe
+D:\SVN\WayLibrary\SeeSharpTools.JY.Remoting\trunk\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.pdb
+D:\SVN\WayLibrary\SeeSharpTools.JY.Remoting\trunk\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\Server.exe
+D:\SVN\WayLibrary\SeeSharpTools.JY.Remoting\trunk\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\Server.pdb
+D:\SVN\WayLibrary\SeeSharpTools.JY.Remoting\trunk\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\SeeSharpTools.JY.Remoting.dll
+D:\SVN\WayLibrary\SeeSharpTools.JY.Remoting\trunk\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\bin\Debug\SeeSharpTools.JY.Remoting.pdb
+D:\SVN\WayLibrary\SeeSharpTools.JY.Remoting\trunk\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.ServerForm.resources
+D:\SVN\WayLibrary\SeeSharpTools.JY.Remoting\trunk\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.Properties.Resources.resources
+D:\SVN\WayLibrary\SeeSharpTools.JY.Remoting\trunk\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+D:\SVN\WayLibrary\SeeSharpTools.JY.Remoting\trunk\SeeSharpTools.JY.Remoting\RemotingExample\MultipleVariables\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
