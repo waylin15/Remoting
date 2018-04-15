@@ -1,12 +1,7 @@
-﻿using System;
+﻿using SeeSharpTools.JY.Remoting;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
-using SeeSharpTools.JY.Remoting;
 
 namespace Client
 {
@@ -28,18 +23,23 @@ namespace Client
 
             foreach (ClientSetting item in config.Setting)
             {
-                JYRemotingClient client =new JYRemotingClient(item);
+                JYRemotingClient client = new JYRemotingClient(item);
                 clientList.Add(client);
                 client.ServerDisconnectionEvent += Client_ServerDisconnectionEvent;
+                client.DataUpdatedEvent += Client_DataUpdatedEvent;
                 client.Start();
             }
+        }
+
+        private void Client_DataUpdatedEvent(object msg)
+        {
+            led_variable1.Value = (bool)clientList[0].Read();
         }
 
         private void Client_ServerDisconnectionEvent(object sender, EventArgs e)
         {
             MessageBox.Show("服务器断线");
         }
-
 
         [Serializable]
         public class Configuration
@@ -60,8 +60,6 @@ namespace Client
 
                 if (clientList[0].IsDataUpdated)
                 {
-                    led_variable1.Value = (bool)clientList[0].Read();
-
                 }
                 if (clientList[1].IsDataUpdated)
                 {
@@ -87,18 +85,15 @@ namespace Client
             }
         }
 
-
         private void button_writeText_Click(object sender, EventArgs e)
         {
             clientList[1].Write(textBox_variable2.Text);
-
         }
 
         private void buttonSwitch_update_ValueChanged(object sender, EventArgs e)
         {
             led_variable1.Value = buttonSwitch_update.Value;
             clientList[0].Write(buttonSwitch_update.Value);
-
         }
 
         private void button_connect_Click(object sender, EventArgs e)

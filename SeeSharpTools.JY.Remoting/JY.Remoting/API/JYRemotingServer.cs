@@ -9,7 +9,7 @@ using System.Runtime.Remoting.Channels.Tcp;
 using System.Runtime.Serialization.Formatters;
 
 /// <summary>
-/// 修改时间：2018.02.27
+/// 修改时间：2018.04.13
 /// 作者：JYTEK
 /// 类库说明：基于微软Remoting类库的功能，建立server,client的架构完成网路通信的资料传递
 /// </summary>
@@ -17,7 +17,12 @@ namespace SeeSharpTools.JY.Remoting
 {
     public class JYRemotingServer
     {
+        #region Public Properties
+        /// <summary>
+        /// 在同一端口上的变量
+        /// </summary>
         public List<RemotingObject> Variables { get; set; }
+        #endregion
 
         #region Private Fields
 
@@ -32,8 +37,6 @@ namespace SeeSharpTools.JY.Remoting
         private object _dataBuf = new object();
 
         #endregion Private Fields
-
-
 
         #region Constructor
 
@@ -102,7 +105,7 @@ namespace SeeSharpTools.JY.Remoting
         /// 推播资料到客户端
         /// </summary>
         /// <param name="data"></param>
-        public void AddVariable(string variableName,Type type)
+        public void AddVariable(string variableName, Type type)
         {
             CreateNewRemotingObject(variableName, type);
             Variables.Add(_dataObject);
@@ -120,10 +123,10 @@ namespace SeeSharpTools.JY.Remoting
 
         #region Private Methods
 
-        private void CreateNewRemotingObject(string variableName,Type t)
+        private void CreateNewRemotingObject(string variableName, Type t)
         {
             //服务器获取远程对象
-            _dataObject = new RemotingObject(variableName,t);
+            _dataObject = new RemotingObject(variableName, t);
 
             ObjRef objRef = RemotingServices.Marshal(_dataObject, _dataObject.Name);
         }
@@ -146,5 +149,4 @@ namespace SeeSharpTools.JY.Remoting
             Name = "RemotingServices";
         }
     }
-
 }

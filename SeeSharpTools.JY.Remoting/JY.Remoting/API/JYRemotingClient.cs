@@ -1,14 +1,13 @@
 ﻿using SeeSharpTools.JY.Remoting.Common;
 using System;
 using System.Collections;
-using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
 using System.Runtime.Serialization.Formatters;
 
 /// <summary>
-/// 修改时间：2018.02.27
+/// 修改时间：2018.04.13
 /// 作者：JYTEK
 /// 类库说明：基于微软Remoting类库的功能，建立server,client的架构完成网路通信的资料传递
 /// </summary>
@@ -16,35 +15,74 @@ namespace SeeSharpTools.JY.Remoting
 {
     public class JYRemotingClient
     {
-        #region Events
+        #region Public Events
 
         /// <summary>
         /// 服务器断线事件
         /// </summary>
         public event EventHandler ServerDisconnectionEvent;
 
+        /// <summary>
+        /// 资料更新的事件
+        /// </summary>
         public event RemotingObject.RemotingDelegate DataUpdatedEvent;
 
-        #endregion Events
+        #endregion Public Events
 
         #region Private Fields
 
+        /// <summary>
+        /// 资料更新的旗标
+        /// </summary>
         private volatile bool _isDataUpdated = false;
 
-        private Stopwatch sp = new Stopwatch();
-        private object _dataBuf = new object();
-        private volatile RemotingObject _dataObject;
-        private ClientEventWrapper wrapper;
+        /// <summary>
+        /// 引擎关闭的旗标
+        /// </summary>
         private volatile bool isClosing = false;
+
+        /// <summary>
+        /// 暂存的资料
+        /// </summary>
+        private object _dataBuf = new object();
+
+        /// <summary>
+        /// 远程变量RemotingObject
+        /// </summary>
+        private volatile RemotingObject _dataObject;
+
+        /// <summary>
+        /// 承载事件的中间层
+        /// </summary>
+        private ClientEventWrapper wrapper;
+
+        /// <summary>
+        /// 客户端配置
+        /// </summary>
         private ClientSetting _config;
+
+        /// <summary>
+        /// TCP通道
+        /// </summary>
         private TcpChannel tcpchannel;
+
         #endregion Private Fields
 
         #region Public Properties
 
+        /// <summary>
+        /// 连线重连的次数
+        /// </summary>
         public int Retry { get; set; }
+
+        /// <summary>
+        /// 是否已成功连接
+        /// </summary>
         public bool Connected { get; set; }
 
+        /// <summary>
+        /// 资料是否更新
+        /// </summary>
         public bool IsDataUpdated
         {
             get
@@ -56,13 +94,11 @@ namespace SeeSharpTools.JY.Remoting
                     //    return _isDataUpdated;
                     //}
                     return _isDataUpdated;
-
                 }
                 else
                 {
                     return false;
                 }
-
             }
         }
 
@@ -73,7 +109,7 @@ namespace SeeSharpTools.JY.Remoting
         /// <summary>
         /// 创建客户端对象
         /// </summary>
-        /// <param name="clientSetting"></param>
+        /// <param name="clientSetting">客户端配置</param>
         public JYRemotingClient(ClientSetting clientSetting)
         {
             try
@@ -142,7 +178,6 @@ namespace SeeSharpTools.JY.Remoting
         {
             try
             {
-
                 Stop();
 
                 ServerDisconnectionEvent?.Invoke(this, null);
@@ -164,7 +199,7 @@ namespace SeeSharpTools.JY.Remoting
                     //    _isDataUpdated = true;
                     //}
                     _isDataUpdated = true;
-
+                    DataUpdatedEvent?.Invoke(msg);
                 }
             }
             catch (Exception ex)
@@ -177,6 +212,9 @@ namespace SeeSharpTools.JY.Remoting
 
         #region Public Methods
 
+        /// <summary>
+        /// 开始
+        /// </summary>
         public void Start()
         {
             try
@@ -205,6 +243,9 @@ namespace SeeSharpTools.JY.Remoting
             }
         }
 
+        /// <summary>
+        /// 停止
+        /// </summary>
         public void Stop()
         {
             //移除所有订阅的事件
@@ -228,7 +269,7 @@ namespace SeeSharpTools.JY.Remoting
         }
 
         /// <summary>
-        /// 推播资料给服务器
+        /// 写资料
         /// </summary>
         /// <param name="data"></param>
         public void Write(object data)
@@ -242,7 +283,6 @@ namespace SeeSharpTools.JY.Remoting
                     //    _dataObject.Write(data);
                     //}
                     _dataObject.Write(data);
-
                 }
             }
             catch (Exception rex)
@@ -251,19 +291,16 @@ namespace SeeSharpTools.JY.Remoting
             }
         }
 
+        /// <summary>
+        /// 读资料
+        /// </summary>
+        /// <returns></returns>
         public object Read()
         {
             try
             {
                 if (!isClosing)
                 {
-                    //lock (_dataObject)
-                    //{
-                    //    _isDataUpdated = false;
-                    //    _dataBuf = _dataObject.Read();
-                    //    return _dataBuf;
-                    //}
-
                     _dataBuf = _dataObject.Read(true);
                     _isDataUpdated = false;
                     return _dataBuf;
@@ -275,7 +312,6 @@ namespace SeeSharpTools.JY.Remoting
             }
             catch (Exception ex)
             {
-
                 if (Marshal.GetHRForException(ex) != -2147467259)
                 {
                     throw ex;
@@ -285,8 +321,6 @@ namespace SeeSharpTools.JY.Remoting
                     return _dataBuf;
                 }
             }
-            
-
         }
 
         #endregion Public Methods
@@ -297,11 +331,20 @@ namespace SeeSharpTools.JY.Remoting
     /// </summary>
     internal class ClientEventWrapper : MarshalByRefObject
     {
+        /// <summary>
+        /// 服务器断线的事件
+        /// </summary>
         public event RemotingObject.ServerDisconnectDelegate ServerDisconnect;
 
+        /// <summary>
+        /// 在客户端的事件
+        /// </summary>
         public event RemotingObject.RemotingDelegate SwapSubscribeAtClient;//在服务器触发,在客户端订阅的事件
 
-        //服务器触发事件
+        /// <summary>
+        /// 由服务器触发的事件
+        /// </summary>
+        /// <param name="msg"></param>
         public void TriggerAtServerSwapEvent(object msg)
         {
             try
@@ -322,11 +365,13 @@ namespace SeeSharpTools.JY.Remoting
             }
         }
 
+        /// <summary>
+        /// 通知断线
+        /// </summary>
         public void NotifyDisconnection()
         {
             try
             {
-
                 ServerDisconnect?.Invoke();
             }
             catch (Exception ex)
@@ -344,14 +389,30 @@ namespace SeeSharpTools.JY.Remoting
     [Serializable]
     public class ClientSetting
     {
+        /// <summary>
+        /// 客户端的端口号，默认8081
+        /// </summary>
         public int LocalPort
         { get; set; }
 
+        /// <summary>
+        /// 连线的变量名称，默认RemotingServices
+        /// </summary>
         public string Name { get; set; }
 
+        /// <summary>
+        /// 服务器的IP地址，默认localhost
+        /// </summary>
         public string ConnectedIP { get; set; }
+
+        /// <summary>
+        /// 服务器的端口号，默认8080
+        /// </summary>
         public int ConnectedPort { get; set; }
 
+        /// <summary>
+        ///
+        /// </summary>
         public ClientSetting()
         {
             LocalPort = 8081;

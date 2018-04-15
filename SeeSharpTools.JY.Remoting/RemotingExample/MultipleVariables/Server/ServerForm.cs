@@ -12,6 +12,7 @@ namespace Server
         private double[] data = new double[10];
         private JYRemotingServer _server;
         private ServerSetting setting;
+
         public ServerForm()
         {
             InitializeComponent();
@@ -30,7 +31,6 @@ namespace Server
             if (_server.Variables[1].IsDataUpdated)
             {
                 textBox_variable2.Text = _server.Variables[1].Read().ToString();
-
             }
 
             //重复读取
@@ -38,7 +38,6 @@ namespace Server
             //buttonSwitch1.Value = (bool)data;
             //data = _server.Variables[1].Read();
             //textBox2.Text = data.ToString();
-
 
             timer1.Enabled = true;
         }
@@ -67,5 +66,4 @@ namespace Server
             _server.Variables[1].Write(textBox_variable2.Text);
         }
     }
-
 }
